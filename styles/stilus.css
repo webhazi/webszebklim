@@ -1,0 +1,296 @@
+/*fejléc: háttérszín, padding, margó, magasság és pozíció*/
+header {
+    background-color: #18096cd4;
+    padding: 10px;
+    margin: 10px;
+    height: 110px;
+    position: relative;
+}
+
+/*fejléc címe (SzakemberKereső): szövegszín, a középre igazítás és a pozíció*/
+header h1 {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 35px;
+}
+
+/* a vízszintes menü stílusát definiálja, beleértve a háttérszínt, a paddingot és a szöveg igazítását*/
+#menu {
+    background-color: #18096cd4;
+    padding: 13px;
+    text-align: center;
+}
+/*a menü lista stílusát definiálja, beleértve a lista típusát, a margót és a padding-et*/
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+/*a menü lista elemek stílusát definiálja, beleértve az inline kijelölést*/
+#menu ul li {
+    display: inline;
+}
+/*a menü linkek stílusát definiálja, beleértve a padding-et, a szöveg dekorációját és a színét*/
+#menu ul li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*a menü linkek stílusát definiálja, amikor az egér föléjük kerül (hover állapot), beleértve a háttérszínt*/
+#menu ul li a:hover {
+    background-color: #90f836;
+    color: #18096cd4;
+}
+/*a fejlécben található képek stílusát definiálja, beleértve a floatot, a margót és a méreteket*/
+header img {
+    float: left;
+    margin: 5px 5px 5px 5px;
+    width: 145px;
+    height: 95%;
+}
+/*a fejléc második képének stílusát definiálja, beleértve a floatot, a margót és a méreteket*/
+header img:nth-child(2) {
+    float: right;
+    margin: 5px 5px 5px 5px;
+    width: 100px;
+    height: auto;
+}
+
+/*a tartalom tartó konténer stílusát definiálja, beleértve a margót, a szövegszínt és a betűtípust*/
+div#wrapper {
+    margin: 10px;
+    color: black;
+    font-style: Source Sans Pro;
+}
+
+div#wrapperi {
+    margin: 10px;
+    color: white;
+    font-style: Arial;
+}
+
+#search-bar {
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(249, 237, 105);
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar form {
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+#search-bar form label,
+#search-bar form select {
+    margin-right: 10px;
+}
+
+#search-bar form select {
+    width: 200px;
+    height: 30px; /* Hozzáadott magasság */
+}
+
+.collapsible {
+    background-color: #18096cd4;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 5px 40px;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+aside {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.center {
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+    color: #555;
+}
+
+iframe {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav {
+    margin: 0px 10px 0px 0px;
+    top: 0px;
+    background-color: #9e8147;
+    width: 200px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px 0px;
+}
+
+nav ul li {
+    padding: 0px 15px;
+}
+
+nav ul li.active {
+    border-right: 5px solid #463920;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #efe9dc;
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+}
+
+div#contenti {
+    display: table-cell;
+    width: 1200px;
+    height: auto;
+    padding: 0px 0px 680px 0px;
+    background-image: url("kepek/index.jpg");
+    font-size: 16px;
+    text-align: justify;
+    color: #352b18;
+}
+
+/*szakik: központi szöveg*/
+div#content {
+    display: table-cell;
+    width: 100%;
+    padding: 15px;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    text-align: justify;
+    color: #352b18;
+}
+
+/*a tartalom központi részének stílusát definiálja, beleértve a szélességet, a paddingot, a háttérismétlést és a szövegszínt*/
+div#contentm {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-repeat: repeat-x;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Georgia", serif;
+    color: #352b18;
+    box-sizing: border-box;
+}
+
+/*bemutatkozás: központi része*/
+#bem {
+    text-align: left;
+    text-justify: newspaper;
+    font-family: "Georgia", serif;
+    color: #352b18;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+/*szakik: kép*/
+div#content img {
+    float: right;
+    width: 15em;
+    height: auto;
+    margin: 0px 0px 15px 15px;
+    padding: 1px;
+}
+
+div#content1 img {
+    float: left;
+    width: 20em;
+    height: auto;
+    margin: 0px 15px 0px 15px;
+    padding: 1px;
+}
+
+div#contentm img {
+    float: right;
+    width: 25em;
+    height: auto;
+    margin: 0px 0px 15px 15px;
+    padding: 1px;
+}
+/*galéria képei*/
+.image-column {
+    display: flex;
+    flex-direction: row;
+    width: auto; /* Az oszlop szélessége */
+    margin-right: 20%;
+}
+
+.image-column img {
+    width: 100%; /* Kép szélessége 100%, eredeti arány megtartása */
+    height: auto; /* Kép magassága automatikus, eredeti arány megtartása */
+    margin-bottom: 10px;
+}
+
+
+/*lábléc*/
+footer {
+    margin-top: auto;
+    padding: 5px 20px;
+    background-color: #18096cd4;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+#content span {
+    font-style: italic;
+}
+
+footer span {
+    font-style: italic;
+  }
+
+p.normal {
+    font-weight: normal;
+}
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 22px;
+    color: #d00b0b;
+}
+
+h4 {
+    padding: 0px;
+    margin: 0px;
+}
