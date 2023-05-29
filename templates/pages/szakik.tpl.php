@@ -6,18 +6,15 @@
     
 
 
+
 <body>
-    <header>
-        
-        <h1>
-            SzakemberKereső
-        </h1>
-    </header>
+
+    
     
         <div id="search-bar">
-            <form action="kereses.php" method="GET">
-                <label for="foglalkozas">Foglalkozás:</label>
-                <select id="foglalkozas" name="foglalkozas">
+            <form action="./logicals/kereses.php" method="GET">
+                <label for="Szak">Foglalkozás:</label>
+                <select id="Szak" name="Szak">
                     <option value="Ácsmester">Ácsmester</option>
                     <option value="Asztalos">Asztalos</option>
                     <option value="Autófényző">Autófényző</option>
@@ -50,15 +47,16 @@
                     <option value="Víz- és gázszerelő">Víz- és gázszerelő</option>
                 </select>
 
-                <label for="terulet">Tevékenységi terület:</label>
-                <select id="terulet" name="terulet">
-                    <option value="Budapest">Budapest</option>
-                    <option value="Budapest és Pest megye">Budapest és Pest megye</option>
+                <label for="Hely">Tevékenységi terület:</label>
+                <select id="Hely" name="Hely">
+                    <option value="1">Budapest</option>
+                    <option value="2">Pest megye</option>
                 </select>
 
-                <input type="submit" value="Keresés">
+                <input type="submit" value="Kereses">
             </form>
         </div>
+       
         <div id="content">
             <img style="width:400px" src="images/uzemeltetes.jpg">
             <h3>Akik között válogathat:</h3>
@@ -94,7 +92,10 @@
             <p><b>30. Víz- és gázszerelő:</b> A csövek partizánjai, akik mindig tudják, hogyan szabályozzák a víz és a gáz áramlását. A csövek közötti útvesztőben sikeresen navigálnak, hogy ezen erőforrások mindig a megfelelő helyre jussanak. Ügyesen telepítik és csatlakoztatják a csöveket, szelepeket és szerelvényeket, és gondoskodnak róla, hogy a fürdőszobákban, konyhákban és egyéb helyiségekben mindig legyen elérhető a víz és a gáz.</p>
         </div>
     </div>
+    </body>
     
-</body>
+    
+
+
 
 
