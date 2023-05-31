@@ -12,7 +12,7 @@
     
     
         <div id="search-bar">
-            <form action="./logicals/kereses.php" method="GET">
+            <form action="./templates/pages/kereses.tpl.php" method="POST">
                 <label for="Szak">Foglalkozás:</label>
                 <select id="Szak" name="Szak">
                     <option value="Ácsmester">Ácsmester</option>
@@ -49,8 +49,8 @@
 
                 <label for="Hely">Tevékenységi terület:</label>
                 <select id="Hely" name="Hely">
-                    <option value="1">Budapest</option>
-                    <option value="2">Pest megye</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Pestmegye">Pest megye</option>
                 </select>
 
                 <input type="submit" value="Kereses">
