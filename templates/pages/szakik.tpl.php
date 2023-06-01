@@ -56,6 +56,7 @@
                 <input type="submit" value="Kereses">
             </form>
         </div>
+
        
         <div id="content">
             <img style="width:400px" src="images/uzemeltetes.jpg">

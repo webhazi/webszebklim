@@ -1,3 +1,4 @@
+<body>
 <?php
 $nev = $_POST["Szak"];
 $hely = $_POST["Hely"];
@@ -28,6 +29,8 @@ $hely = $_POST["Hely"];
    echo " A lekérdezésnek nincs eredménye.";
  }
  $conn->close();
+?>
 
- ?>
+</body>
+ 
  
