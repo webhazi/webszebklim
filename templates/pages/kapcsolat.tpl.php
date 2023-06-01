@@ -1,3 +1,82 @@
+<?php
+
+function ki($szoveg)
+{
+    echo htmlspecialchars($szoveg, ENT_QUOTES);
+}
+
+
+$hiba = false;
+$sikeres = "";
+$sikertelen = "";
+
+if (empty($_POST['name'])) {
+    $hiba = true;
+    $sikertelen = "<p class='text-danger'>A név mezőnek NEM szabad üresnek lennie!</p>";
+}
+
+else if (empty($_POST['email'])) {
+    $hiba = true;
+    $sikertelen = "<p class='text-danger'>Az email mezőnek NEM szabad üresnek lennie!</p>";
+}
+
+else if (empty($_POST['message'])) {
+    $hiba = true;
+    $sikertelen = "<p class='text-danger'>A szövegdoboznak NEM szabad üresnek lennie!</p>";
+}
+
+else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $hiba = true;
+}
+
+else if (!$hiba) {
+     $sikeres = "<p class='text-success'>Sikeres küldés</p>";
+}
+
+$gomb = $_POST['gomb'] ?? false;
+
+?>
+<section id="five" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Kapcsolat</h2>
+        <p>Kérem ha az oldallal kapcsolatos észrevéztele van, vagy nem találja a megfelelő szakembert jelezze nekünk!</p>
+        <div class="split style1">
+            <section>
+                <form action = "?oldal=uzenet" method="post">
+
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Név</label>
+                            <input type="text" name="name" id="name" />
+                            <p class='text-danger' id="hibaN"></p>
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                            <p class='text-danger' id="hibaE"></p>
+                        </div>
+                        <div class="field">
+                            <label for="message">Üzenet</label>
+                            <textarea name="message" id="message" rows="5"></textarea>
+                            <p class='text-danger' id="hibaM"></p>
+                        </div>
+                    </div>
+                    <ul class="actions" style="list-style-type: none;">
+                        <li><a href="" class="button submit" name="gomb">Üzenet küldése</a></li>
+                    </ul>
+                </form>
+            </section>			
+			
+			
+			
+			
+            <?php if ($gomb && $hiba) {
+                echo $sikertelen;
+            } else if ($gomb && !$hiba) {
+                echo $sikeres;
+            } ?>
+
+
 <h2>Adatok:</h2>
 <p>Ügyvezető: <strong>Szebelédi Mariann és Klimán László</strong></p>
 <p>E-mail: <strong>szekl@nethely.hu</strong></p>
