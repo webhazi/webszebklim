@@ -5,29 +5,18 @@ $hely = $_POST["Hely"];
 
 
 
- $servername = "localhost";
- $username = "root";
- $password = "";
- $adat = "szakik";
-
- $conn = new mysqli($servername, $username, $password,$adat);
-
-
-
- 
- 
- 
-
-
- $sql = "SELECT Szak, Név, Telefon, Helyseg FROM mester WHERE Szak = '$nev' AND Helyseg = '$hely'";
- $result = $conn->query($sql);
- if ($result->num_rows > 0){
-   while($row = $result->fetch_assoc()){
-      echo "Szak: " . $row["Szak"]. " ,  Név:" . $row["Név"]. ", Telefon:". $row["Telefon"]. ", Helyseg: ".$row["Helyseg"]. "<br";
-   }
- }else {
-   echo " A lekérdezésnek nincs eredménye.";
- }
+try {
+  // Kapcsolódás
+  $pdo = new PDO('mysql:host=localhost;dbname=szebkli', 'szebkli', 'jelszo',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+  $pdo->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
+  $utasitas = "Select Szak, Név, Telefon, Helyseg From mester Where Szak = '$nev' and Helyseg = '$hely'";
+  $eredm = $pdo->query($utasitas);
+  foreach ($eredm as $sor) 
+    print $sor['Szak'].  "<br>"  .$sor['Név'].  "<br>"  .$sor['Telefon'].  "<br>" .$sor['Helyseg']. "<br>";
+}
+catch (PDOException $e) {
+  echo "Hiba: ".$e->getMessage();
+}      
  $conn->close();
 ?>
 

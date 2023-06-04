@@ -14,6 +14,8 @@ $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
     'ceg' => 'Készitette: Szebelédi Mariann (C919WN & Klimán László (MS7G8P) '
 );
+$dbname = 'szebkli';
+$dbjelszo = 'jelszo';
 
 $oldalak = array(
 	'/' => array('fajl' => 'koszonto', 'szoveg' =>'Köszöntő', 'menun' => array(1,1)),

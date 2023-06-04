@@ -4,10 +4,7 @@
 
     try {
         // Kapcsolódás
-        $dbh = new PDO(
-            'mysql:host=localhost;dbname=uzenetdb',
-            $dbname,
-            $dbjleszo,
+        $dbh = new PDO('mysql:host=localhost;dbname=szebkli',$dbname,$dbjelszo,
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
         );
 
